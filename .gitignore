@@ -1,0 +1,23 @@
+# dependencies
+node_modules
+package-lock.json
+
+.idea
+*.iml
+gen### Java template
+# Compiled class file
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+
+# Package Files #
+*.zip
+*.tar.gz
+*.rar
+
+# Mac config file
+*.DS_Store
