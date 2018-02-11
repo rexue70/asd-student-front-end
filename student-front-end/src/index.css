@@ -1,5 +1,39 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  font-family: "Helvetica Neue";
+  padding-left: 10%;
+  padding-right: 10%;
 }
+
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  color: #CC0000;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #615445;
+}
+
+.subtitle {
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #89191C;
+}
+
+.text-black {
+  font-size: 1.2em;
+  font-weight: 100;
+  color: #000000;
+  text-align: justify;
+}
+
+.text-gray {
+  font-size: 1.1em;
+  font-weight: 100;
+  color: #b0ad82;
+  text-align: justify;
+}
+
+
