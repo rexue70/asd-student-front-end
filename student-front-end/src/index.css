@@ -1,39 +1,95 @@
 body {
-  font-family: "Helvetica Neue";
-  padding-left: 10%;
-  padding-right: 10%;
+    font-family: "Helvetica Neue";
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 3%;
 }
 
 h1 {
-  font-size: 3em;
-  font-weight: 700;
-  color: #CC0000;
+    font-size: 3em;
+    font-weight: 700;
+    color: #CC0000;
+}
+
+h1-big {
+    font-size: 50px;
+    font-weight: 500;
+    color: #e11a2c;
+}
+
+h1-small {
+    font-size: 2em;
+    font-weight: 300;
+    color: #CC0000;
 }
 
 h3 {
-  font-size: 1.5em;
-  font-weight: 600;
-  color: #615445;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #615445;
+}
+
+h3-small {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #615445;
+}
+
+h3-median {
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #615445;
 }
 
 .subtitle {
-  font-size: 1.5em;
-  font-weight: 500;
-  color: #89191C;
+    font-size: 1.5em;
+    font-weight: 500;
+    color: #89191C;
 }
 
 .text-black {
-  font-size: 1.2em;
-  font-weight: 100;
-  color: #000000;
-  text-align: justify;
+    font-size: 1.2em;
+    font-weight: 100;
+    color: #000000;
+    text-align: justify;
 }
 
 .text-gray {
-  font-size: 1.1em;
-  font-weight: 100;
-  color: #b0ad82;
-  text-align: justify;
+    font-size: 1.1em;
+    font-weight: 100;
+    color: #b0ad82;
+    text-align: justify;
 }
+
+/*============================================*/
+
+ul.nav-row {
+    display: block;
+    width: 100%;
+    float:right;
+}
+
+ul.nav-row > li {
+    display: table-cell;
+    padding: 20px;
+    float: right;
+}
+
+li:hover {
+    color: hotpink;
+}
+
+.nav-text {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #615445;
+
+}
+
+.nav-text:hover {
+    color: #e11a2c;
+}
+
 
 
