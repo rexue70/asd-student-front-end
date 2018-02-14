@@ -74,6 +74,7 @@ const Square = styled.div`
         width: 250px;
         height: 250px;
         background-color: rgba(204,0,0,0.7);
+        background-repeat: no-repeat;
         text-align: right;
         display: table-cell;
         
