@@ -1,17 +1,15 @@
 import React, {Component} from 'react';
+import CoopHeader from './CoopHeader';
 
 
 class Coop extends Component {
 
     render() {
         return (
-            <div>
-                Coop
+            <div className="container">
+                <CoopHeader/>
             </div>
         )
-
-
-
     }
 }
 
