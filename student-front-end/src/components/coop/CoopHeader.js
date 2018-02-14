@@ -1,35 +1,58 @@
 import React, {Component} from 'react';
-import background from '../../images/background.png'
+import background from '../../images/coop_background.jpeg'
+import styled from "styled-components";
 
 class CoopHeader extends Component {
 
     render() {
         return (
-            <div>
-                <div className="image">
-                    <img src={background}></img>
-                </div>
-
-                <div>
-                <table className="centered">
+            <Wrapper>
+                <Table>
                     <tr>
-                        <th class="color1">M</th>
-                        <th class="color2">Y</th>
-                        <th class="space"></th>
-                        <th class="color1">C</th>
-                        <th class="color2">O</th>
-                        <th class="color1">O</th>
-                        <th class="color2">P</th>
+                        <th><Title1>M</Title1></th>
+                        <th><Title2>Y</Title2></th>
+                        <th><Space></Space></th>
+                        <th><Title1>C</Title1></th>
+                        <th><Title2>O</Title2></th>
+                        <th><Title1>O</Title1></th>
+                        <th><Title2>P</Title2></th>
                     </tr>
-                </table>
-                </div>
-                <div className="bottom">
-                    Find your coop resource here!
-                </div>
-            </div>
+                </Table>
+            </Wrapper>
         )
     }
 }
 
+const Wrapper = styled.div`
+        width: 100%;
+        height: 710px;
+        background-image: url(${background});
+        background-size: 100%;
+    `
+
+const Table = styled.table`
+        border-spacing: 10px;
+        margin: auto;
+        padding-top: 100px;
+    `
+
+const Title1 = styled.p`
+        color: #CC0000;
+        font-size: 100px;
+`
+
+const Title2 = styled.p`
+        color: #781111;
+        font-size: 100px;
+`
+
+const Title3 = styled.p`
+        font-size:40px;
+        color:#F58282;
+`
+
+const Space = styled.p`
+        width: 30px;
+`
 
 export default CoopHeader
