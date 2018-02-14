@@ -5,11 +5,13 @@ import {
     Link
 } from 'react-router-dom';
 import Home from './components/home/Home';
+import Header from './components/Header';
 import Profile from './components/profile/Profile';
 import Academic from './components/academic/Academic';
 import Coop from './components/coop/Coop';
 import Resources from './components/resources/Resources';
-import Header from './components/header';
+import Header_Yudong from './components/Header_Yudong';
+import Footer from "./components/Footer";
 
 
 class App extends Component {
@@ -34,6 +36,7 @@ class App extends Component {
 
                     </div>
                 </Router>
+                <Footer/>
             </div>
         );
     }

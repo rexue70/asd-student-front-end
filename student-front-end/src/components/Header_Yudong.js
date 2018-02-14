@@ -2,13 +2,26 @@ import React, {Component} from 'react';
 import img_CCISlogo from '../images/NEU-logo.png'
 import styled from "styled-components";
 
+
 class Header extends Component {
+
     render() {
         return (
             <div>
+                {/*<h1-small>Northeastern University</h1-small>*/}
+                {/*<br />*/}
+                {/*<h3-small>College of Computer and Information Science</h3-small>*/}
+                {/*<br />*/}
+                {/*<br />*/}
                 <CCISLogo/>
-                <MainTitile>CURRENT STUDENT</MainTitile>
-                <SubTitile>Align MS in Computer Science Program</SubTitile>
+                <TitileArea>
+                    <h1-big>CURRENT STUDENT</h1-big>
+                    <br />
+                    <h3-median>Align MS in Computer Science Program</h3-median>
+                    <br />
+                    <br />
+                    <br />
+                </TitileArea>
             </div>
         )
     }
@@ -20,7 +33,11 @@ const CCISLogo = () => (
             <LogoImage src={img_CCISlogo} alt={'NEU-logo'}/>
         </a>
     </LogoArea>
-    )
+)
+
+const TitileArea = styled.div`
+        margin: 20px;
+    `
 
 const LogoArea = styled.div`
         width: 100%;
@@ -29,19 +46,6 @@ const LogoArea = styled.div`
 
 const LogoImage = styled.img`
         height: 100%;
-    `
-
-const MainTitile = styled.h1`
-        margin: 10px 15px;
-        color: #CC0000;
-        font-size: 60px;
-    `
-
-const SubTitile = styled.h1`
-        margin: 10px 15px;
-        color: dimgrey;
-        font-size: 30px;
-        font-weight:300;
     `
 
 export default Header

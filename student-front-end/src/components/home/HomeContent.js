@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import img_background from './images/background.png'
+import img_background from '../../images/home_background.png'
 import styled from "styled-components";
 import {Link} from 'react-router-dom';
 

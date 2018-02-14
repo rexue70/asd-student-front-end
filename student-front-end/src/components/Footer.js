@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-import img_footer from './images/footer.png'
+import img_footer from '../images/footer.png'
 import styled from 'styled-components'
 
-class HomeFooter extends Component {
+class Footer extends Component {
     render() {
         return (
             <Wrapper>
@@ -20,4 +20,4 @@ const FooterImage = styled.img`
         width: 100%;
     `
 
-export default HomeFooter
+export default Footer
