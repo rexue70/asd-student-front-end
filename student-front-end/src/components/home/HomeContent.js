@@ -12,12 +12,16 @@ export default class HomeContent extends Component {
                     <tr><td>
                         <Link style={{textDecoration: 'none'}} to="/profile"><ProfileCard/></Link>
                     </td><td>
+                        <GraySquare></GraySquare>
+                    </td><td>
                         <Link style={{textDecoration: 'none'}} to="/academic"><AcademicCard/></Link>
                     </td></tr>
                     <tr><td>
-                        <Link style={{textDecoration: 'none'}} to="/coop"><CoopCard/></Link>
+                        <GraySquare></GraySquare>
                     </td><td>
                         <Link style={{textDecoration: 'none'}} to="/resources"><ResourceCard/></Link>
+                    </td><td>
+                        <GraySquare></GraySquare>
                     </td></tr>
                 </CardTable>
             </Wrapper>
@@ -39,34 +43,23 @@ const ProfileCard = () => (
 
 const AcademicCard = () => (
     <Square>
+        <CardTitle>ACADEMIC</CardTitle>
         <CardDetails>
             Requirements<br/>
             Curriculum<br/>
             GPA
-        </CardDetails>
-        <CardTitle>ACADEMIC</CardTitle>
-    </Square>
-)
-
-const CoopCard = () => (
-    <Square>
-        <CardTitle>CO-OP</CardTitle>
-        <CardDetails>
-            Co-op Records<br/>
-            Co-op Research<br/>
-            FAQ
         </CardDetails>
     </Square>
 )
 
 const ResourceCard = () => (
     <Square>
+        <CardTitle>RESOURCE</CardTitle>
         <CardDetails>
             Schedule<br/>
             Tuition<br/>
             Campus
         </CardDetails>
-        <CardTitle>RESOURCE</CardTitle>
     </Square>
 )
 
@@ -82,6 +75,14 @@ const Square = styled.div`
             // cursor: pointer;
         }
     `
+
+const GraySquare = styled.div`
+        width: 250px;
+        height: 250px;
+        background-color: rgba(200,150,150,0.5);
+        text-align: right;
+        display: table-cell;
+`
 
 const CardTitle = styled.h1`
         margin: 0px 15px;
@@ -108,5 +109,5 @@ const Wrapper = styled.div`
 const CardTable = styled.table`
         border-spacing: 10px;
         margin: auto;
-        padding-top: 180px;
+        padding-top: 140px;
     `

@@ -19,13 +19,11 @@ class NavigationBar extends Component {
                         <li><Link to="/profile" className="nav-text">Profile</Link></li>
                         <li><Link to="/academic" className="nav-text">Academic</Link></li>
                         <li><Link to="/resources" className="nav-text">Resources</Link></li>
-                        <li><Link to="/coop" className="nav-text">COOP</Link></li>
                         <li><Link to="/" className="nav-text">Home</Link></li>
                     </ul>
                     <Route exact path="/" component={Home}/>
                     <Route exact path="/profile" component={Profile}/>
                     <Route path="/academic" component={Academic}/>
-                    <Route path="/coop" component={Coop}/>
                     <Route path="/resources" component={Resources}/>
 
                 </div>
