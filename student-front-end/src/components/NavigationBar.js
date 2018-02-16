@@ -8,7 +8,6 @@ import Profile from "./profile/Profile";
 import Academic from "./academic/Academic";
 import Home from "./home/Home";
 import Resources from "./resources/Resources";
-import Coop from "./coop/Coop";
 
 class NavigationBar extends Component {
     render() {
