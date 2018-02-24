@@ -3,7 +3,6 @@ import img_background from '../../images/home_background.png'
 import styled from "styled-components";
 import {Link} from 'react-router-dom';
 
-
 export default class HomeContent extends Component {
     render() {
         return (
@@ -104,10 +103,12 @@ const Wrapper = styled.div`
         height: 960px;
         background-image: url(${img_background});
         background-size: 100%;
+        margin: auto auto;
     `
 
 const CardTable = styled.table`
+        margin: auto 200px;
         border-spacing: 10px;
-        margin: auto;
-        padding-top: 140px;
+        padding-top: 260px;
+        display: inline-block;
     `
