@@ -20,7 +20,7 @@ class ProfileSelect extends Component {
         });
 
         return (
-            <div>
+            <div style={{margin:"auto",width:"50%"}}>
                 <p>{this.state.text}</p>
                 <select style={{width: "175px"}}>
                     {optionList}

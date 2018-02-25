@@ -12,7 +12,7 @@ class ProfileInput extends Component {
 
     render() {
         return (
-            <div>
+            <div style={{margin:"auto",width:"50%"}}>
                 <p>{this.state.text}</p>
                 <input style={{width: "167px"}}/>
             </div>

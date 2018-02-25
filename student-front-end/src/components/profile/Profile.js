@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ProfileSelect from "./ProfileSelect";
 import ProfileInput from "../profile/ProfileInput";
 import ProfileCard from "../profile/ProfileCard"
-import { Row,Col,Grid,css } from 'react-bootstrap';
+import {Row, Col, Grid, css} from 'react-bootstrap';
 
 import Experiences from "./Experiences"
 
@@ -62,86 +62,27 @@ class Profile extends Component {
         return (
             <div>
                 <div>
-                    {/*<div style={{width: '100%'}}>*/}
                     <ProfileCard />
-                {/*</div>*/}
+                    <Grid>
+                        <Row className="show-grid">
 
-                {/*<div style={{display: 'table', width: '100%'}}>*/}
-                    {/*<div style={{display: 'table-cell'}}>*/}
-                        {/*<FormCss>*/}
-                            {/*<ProfileSelect options={options.Gender}/>*/}
-                            {/*<ProfileSelect options={options.Age}/>*/}
-                            {/*<ProfileInput options={options.Email}/>*/}
-                            {/*/!*<ProfileInput options={options.Address}/>*!/*/}
-                            {/*/!*<ProfileInput options={options.Phone}/>*!/*/}
-                            {/*<ProfileSelect options={options.Campus}/>*/}
-                        {/*</FormCss>*/}
-                    {/*</div>*/}
-
-                    {/*<div style={{display: 'table-cell'}}>*/}
-                        {/*<FormCss>*/}
-                            {/*<ProfileSelect options={options.StartTerm}/>*/}
-                            {/*<ProfileSelect options={options.ExpectedGraduation}/>*/}
-                            {/*<ProfileSelect options={options.Major}/>*/}
-                            {/*<ProfileSelect options={options.Degree}/>*/}
-                            {/*<ProfileSelect options={options.Enrollment}/>*/}
-                            {/*/!*<ProfileSelect options={options.Citizenship}/>*!/*/}
-                        {/*</FormCss>*/}
-                    {/*</div>*/}
-                {/*</div>*/}
-
-
-                <Grid>
-                    <Row className="show-grid">
-
-                        <Col md={6}>
-                            <ProfileSelect options={options.Gender}/>
-                            <ProfileSelect options={options.Age}/>
-                            <ProfileInput options={options.Email}/>
-                            <ProfileSelect options={options.Campus}/>
-                            {/*<p>left</p>*/}
-                            {/*<code>&lt;{'Col md={6} mdPush={6}'} /">&gt;</code>*/}
-                            {/*<img src={profile_pic} alt="pic"/>*/}
-                        </Col>
-
-                        <Col md={6}>
-                            {/*<p>right</p>*/}
-                            {/*<code>&lt;{'Col md={6} mdPull={6}'} /">&gt;</code>*/}
-                            <ProfileSelect options={options.StartTerm}/>
-                            <ProfileSelect options={options.ExpectedGraduation}/>
-                            <ProfileSelect options={options.Major}/>
-                            <ProfileSelect options={options.Degree}/>
-                            <ProfileSelect options={options.Enrollment}/>
-                        </Col>
-
-                    </Row>
-                </Grid>
-
-                    {/*</div>*/}
-
-                    <div style={{display: 'table', width: '100%'}}>
-                        <div style={{display: 'table-cell'}}>
-                            <FormCss>
+                            <Col md={6} >
                                 <ProfileSelect options={options.Gender}/>
                                 <ProfileSelect options={options.Age}/>
                                 <ProfileInput options={options.Email}/>
-                                {/*<ProfileInput options={options.Address}/>*/}
-                                {/*<ProfileInput options={options.Phone}/>*/}
                                 <ProfileSelect options={options.Campus}/>
-                            </FormCss>
-                        </div>
+                            </Col>
 
-                        <div style={{display: 'table-cell'}}>
-                            <FormCss>
+                            <Col md={6}>
                                 <ProfileSelect options={options.StartTerm}/>
                                 <ProfileSelect options={options.ExpectedGraduation}/>
                                 <ProfileSelect options={options.Major}/>
                                 <ProfileSelect options={options.Degree}/>
                                 <ProfileSelect options={options.Enrollment}/>
-                                {/*<ProfileSelect options={options.Citizenship}/>*/}
-                            </FormCss>
-                        </div>
-                    </div>
+                            </Col>
+
+                        </Row>
+                    </Grid>
                     <Experiences/>
                     <UpdateButton>Update</UpdateButton>
                 </div>
@@ -172,5 +113,11 @@ const UpdateButton = styled.button`
     border-radius: 30px;
     `
 
+const center = styled.div`
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}`
 
 export default Profile
