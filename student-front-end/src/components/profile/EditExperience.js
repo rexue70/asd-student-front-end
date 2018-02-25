@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled from "styled-components";
 import ExperienceContent from "./ExperienceContent";
+import background from "../../images/profile_background.png"
 
 export default class EditExperience extends Component {
     constructor(props) {
@@ -47,14 +48,15 @@ export default class EditExperience extends Component {
             <Wrapper>
                 <Wrapper_Inner>
                     <h2>{this.props.text}</h2>
+                    <Rule></Rule>
                     <ExperienceContent
                         changeTitle={this.changeTitle.bind(this)}
                         changeCompany={this.changeCompany.bind(this)}
                         changeDesc={this.changeDesc.bind(this)}
-                        item={this.state}/>
-                    <button onClick={this.props.closePopup}>Cancel</button>
-                    <button onClick={this.editExperience}>Ok</button>
-                    <button onClick={this.deleteExpeirence}>Delete</button>
+                        item={this.state}/> <br/>
+                    <Button onClick={this.props.closePopup}>Cancel</Button>
+                    <Button onClick={this.editExperience}>Ok</Button>
+                    <Button onClick={this.deleteExpeirence}>Delete</Button>
                 </Wrapper_Inner>
             </Wrapper>
         )
@@ -64,7 +66,7 @@ export default class EditExperience extends Component {
 const Wrapper = styled.div`
         position: fixed;
         width: 100%;
-        height: 100%;
+        height: 120%;
         top: 0;
         left: 0;
         right: 0;
@@ -81,4 +83,14 @@ const Wrapper_Inner = styled.div`
         bottom: 25%;
         margin: auto;
         background: white;
+    `
+
+const Rule = styled.p`
+        height: 1px;
+        border: 0;
+        box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+    `
+
+const Button = styled.button`
+        margin: 0 10%;
     `

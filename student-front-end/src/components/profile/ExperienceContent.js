@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import styled from "styled-components";
 
 export default class ExperienceContent extends Component {
     constructor() {
@@ -23,13 +24,38 @@ export default class ExperienceContent extends Component {
     render() {
         return(
                 <div>
-                    <p>Job Title</p>
-                    <input onChange={this.handleTitle.bind(this)} value={this.props.item.jobTitle}></input>
-                    <p>Company</p>
-                    <input onChange={this.handleCompany.bind(this)} value={this.props.item.company}></input>
-                    <p>Description</p>
-                    <input onChange={this.handleDesc.bind(this)} value={this.props.item.description}></input>
+                    <Title>
+                        <label for={"jobTitle"}>Job Title</label>
+                    </Title>
+                    <Input onChange={this.handleTitle.bind(this)} id={"jobTitle"} value={this.props.item.jobTitle} size={50}></Input>
+
+                    <Title>
+                        <label for={"company"}>Company</label>
+                    </Title>
+                    <Input onChange={this.handleCompany.bind(this)} id={"company"} value={this.props.item.company} size={50}></Input>
+
+                    <Title>
+                        <label for={"desc"}>Description</label>
+                    </Title>
+                    <Textarea onChange={this.handleDesc.bind(this)} id={"desc"}
+                              value={this.props.item.description} cols={50} rows={6}></Textarea>
                 </div>
             )
     }
 }
+
+const Title = styled.p`
+        color: black;
+        font-size: 12px;
+        margin: 0 10%;
+        font-weight: bold;
+    `
+
+const Input = styled.input`
+        margin: 1% 10%;
+        height: 30px; 
+    `
+
+const Textarea = styled.textarea`
+        margin: 1% 10%;
+    `
