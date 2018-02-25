@@ -61,7 +61,7 @@ h3-median {
     text-align: justify;
 }
 
-.btn-primary {
+.btn-prim {
     border-radius: 10px;
     background-color: rgba(245, 130, 130, 0.5);
     font-size: 16px;
@@ -72,7 +72,7 @@ h3-median {
     transition-duration: 0.4s;
 }
 
-.btn-primary:hover {
+.btn-prim:hover {
     background-color: #CC0000;
 }
 
