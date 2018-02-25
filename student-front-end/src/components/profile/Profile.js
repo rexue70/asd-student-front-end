@@ -5,6 +5,7 @@ import ProfileInput from "../profile/ProfileInput";
 import ProfileCard from "../profile/ProfileCard"
 import { Row,Col,Grid,css } from 'react-bootstrap';
 
+import Experiences from "./Experiences"
 
 const options = {
     Gender: {
@@ -57,12 +58,11 @@ const options = {
 
 
 class Profile extends Component {
-
-
     render() {
         return (
             <div>
-                {/*<div style={{width: '100%'}}>*/}
+                <div>
+                    {/*<div style={{width: '100%'}}>*/}
                     <ProfileCard />
                 {/*</div>*/}
 
@@ -117,8 +117,35 @@ class Profile extends Component {
                     </Row>
                 </Grid>
 
+                    {/*</div>*/}
 
-                <UpdateButton>Update</UpdateButton>
+                    <div style={{display: 'table', width: '100%'}}>
+                        <div style={{display: 'table-cell'}}>
+                            <FormCss>
+                                <ProfileSelect options={options.Gender}/>
+                                <ProfileSelect options={options.Age}/>
+                                <ProfileInput options={options.Email}/>
+                                {/*<ProfileInput options={options.Address}/>*/}
+                                {/*<ProfileInput options={options.Phone}/>*/}
+                                <ProfileSelect options={options.Campus}/>
+                            </FormCss>
+                        </div>
+
+                        <div style={{display: 'table-cell'}}>
+                            <FormCss>
+                                <ProfileSelect options={options.StartTerm}/>
+                                <ProfileSelect options={options.ExpectedGraduation}/>
+                                <ProfileSelect options={options.Major}/>
+                                <ProfileSelect options={options.Degree}/>
+                                <ProfileSelect options={options.Enrollment}/>
+                                {/*<ProfileSelect options={options.Citizenship}/>*/}
+                            </FormCss>
+                        </div>
+                    </div>
+                    <Experiences/>
+                    <UpdateButton>Update</UpdateButton>
+                </div>
+
 
             </div>
         )
