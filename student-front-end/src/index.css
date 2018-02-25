@@ -115,6 +115,21 @@ li:hover {
 .navbar-trans {
     background: transparent; }
 
+.btn-primary {
+    border-radius: 10px;
+    background-color: rgba(245, 130, 130, 0.5);
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    padding: 14px 40px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-primary:hover {
+    background-color: #CC0000;
+}
+
 
 
 
