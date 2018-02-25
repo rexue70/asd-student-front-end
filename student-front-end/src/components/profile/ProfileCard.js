@@ -40,13 +40,13 @@ class ProfileCard extends Component {
                     <Row className="show-grid">
 
                         <Col md={6}>
-                            {/*left*/}
+                            {/*<p>left</p>*/}
                             {/*<code>&lt;{'Col md={6} mdPush={6}'} /">&gt;</code>*/}
                             <img src={profile_pic} alt="pic"/>
                         </Col>
 
                         <Col md={6}>
-                            {/*right*/}
+                            {/*<p>right</p>*/}
                             {/*<code>&lt;{'Col md={6} mdPull={6}'} /">&gt;</code>*/}
                             <ProfileInput options={options.FirstName}/>
                             <ProfileInput options={options.MiddleName}/>
