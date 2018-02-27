@@ -19,12 +19,6 @@ const options = {
     Email: {
         text: 'Input your email',
     },
-    Address: {
-        text: 'Input your address',
-    },
-    Phone: {
-        text: 'Input your Phone',
-    },
     Campus: {
         text: 'Select your campus',
         data: ['Boston', 'Seattle', 'Silicon Valley'],
@@ -49,15 +43,37 @@ const options = {
         text: 'Enrollment Student',
         data: ['Yes (active student)', 'No'],
     },
-    Citizenship: {
-        text: 'Select your citizenship',
-        data: ['America', 'Chinese', 'Indian', 'Canadian'],
-    }
 
 };
 
 
 class Profile extends Component {
+
+    constructor(props) {
+        super(props);
+        this.handler = this.handler.bind(this);
+        this.state = {
+            Gender: null,
+            Age: null,
+            Email: null,
+            Campus: null,
+            StartTerm: null,
+            ExpectedGraduation: null,
+            Major: null,
+            Degree: null,
+            Enrollment: null,
+        };
+    }
+
+    handler(field, value) {
+        this.setState({
+            field: value
+        })
+    }
+
+
+
+
     render() {
         return (
             <div>
@@ -67,7 +83,7 @@ class Profile extends Component {
                         <Row className="show-grid">
 
                             <Col md={6} >
-                                <ProfileSelect options={options.Gender}/>
+                                <ProfileSelect handler={this.handler} options={options.Gender}/>
                                 <ProfileSelect options={options.Age}/>
                                 <ProfileInput options={options.Email}/>
                                 <ProfileSelect options={options.Campus}/>

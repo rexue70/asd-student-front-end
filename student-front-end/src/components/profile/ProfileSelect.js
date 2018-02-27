@@ -11,16 +11,22 @@ class ProfileSelect extends Component {
         };
     }
 
+
+    change() {
+        console.log("it is change");
+    }
+
+
     render() {
 
         const optionList = this.state.options.map(option => {
             return (
-                <option key={option} value={option}>{option}</option>
+                <option key={option} value={option} onChange={this.change}>{option}</option>
             )
         });
 
         return (
-            <div style={{margin:"auto",width:"50%"}}>
+            <div style={{margin: "auto", width: "50%"}}>
                 <p>{this.state.text}</p>
                 <select style={{width: "175px"}}>
                     {optionList}
