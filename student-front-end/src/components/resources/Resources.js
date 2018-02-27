@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ResourceContent from "./ResourceContent";
 
 
 class Resources extends Component {
@@ -6,7 +7,7 @@ class Resources extends Component {
     render() {
         return (
             <div>
-                Resources
+                <ResourceContent/>
             </div>
         )
     }
