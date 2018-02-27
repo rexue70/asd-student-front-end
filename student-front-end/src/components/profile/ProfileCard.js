@@ -3,7 +3,7 @@ import profile_image from '../../images/profile_background.png';
 import profile_pic from '../../images/Profile_example_pic.png';
 import styled from 'styled-components'
 import ProfileInput from "../profile/ProfileInput";
-import { Row,Col,Grid,css } from 'react-bootstrap';
+import {Row, Col, Grid, css} from 'react-bootstrap';
 import pen from '../../images/edit_pen.png'
 
 
@@ -32,7 +32,7 @@ class ProfileCard extends Component {
                 <div>
                     <img style={{width: "100%"}} src={profile_image} alt="pic"/>
                     <hr />
-                    <a style={{margin:'14%'}}>Hi, Yudong, This is your profile details</a>
+                    <a style={{margin: '14%'}}>Hi, Yudong, This is your profile details</a>
                     <br/>
                     <br/>
                 </div>
@@ -42,47 +42,66 @@ class ProfileCard extends Component {
                     <Row className="show-grid">
 
                         <Col md={6}>
-                            <img style={{display:"block",margin:"auto",width:"50%", height:"50%"}} src={profile_pic} alt="pic"/>
+                            <img style={{display: "block", margin: "auto", width: "50%", height: "50%"}}
+                                 src={profile_pic} alt="pic"/>
                         </Col>
 
                         <Col md={6}>
                             <Area>
-                                <tr width="100%">
-                                    <td width="50%">
-                                        <Label>FirstName</Label>
-                                    </td>
-                                    <td width="10%">
-                                        <ButtonEdit src={pen}></ButtonEdit>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <Content>Yudong</Content>
-                                </tr>
+                                <table>
+                                    <tbody>
+                                    <tr width="100%">
+                                        <td width="50%">
+                                            <Label>FirstName</Label>
+                                        </td>
+                                        <td width="10%">
+                                            <ButtonEdit src={pen}></ButtonEdit>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <Content>Yudong</Content>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+                                    <tr width="100%">
+                                        <td width="50%">
+                                            <Label>MiddleName</Label>
+                                        </td>
+                                        <td width="10%">
+                                            <ButtonEdit src={pen}></ButtonEdit>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <Content></Content>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+                                    <tr width="100%">
+                                        <td width="50%">
+                                            <Label>LastName</Label>
+                                        </td>
+                                        <td width="10%">
+                                            <ButtonEdit src={pen}></ButtonEdit>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                    <tbody>
+                                    <tr>
+                                        <td>
+                                            <Content>Wang</Content>
+                                        </td>
+                                    </tr>
+                                    </tbody>
 
-
-                                <tr width="100%">
-                                    <td width="50%">
-                                        <Label>MiddleName</Label>
-                                    </td>
-                                    <td width="10%">
-                                        <ButtonEdit src={pen}></ButtonEdit>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <Content></Content>
-                                </tr>
-
-                                <tr width="100%">
-                                    <td width="50%">
-                                        <Label>LastName</Label>
-                                    </td>
-                                    <td width="10%">
-                                        <ButtonEdit src={pen}></ButtonEdit>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <Content>Wang</Content>
-                                </tr>
+                                </table>
                             </Area>
                         </Col>
 
@@ -91,7 +110,7 @@ class ProfileCard extends Component {
                 <br />
                 <hr />
                 <br />
-            </div>
+            </ div >
         )
     }
 }
@@ -114,7 +133,7 @@ const Label = styled.p`
     font-weight: bold;
 `
 
-const Content = styled.p`
+const Content = styled.div`
     margin: 3%;
     color: #766D61;
     font-size: 20px;

@@ -19,12 +19,6 @@ const options = {
     Email: {
         text: 'Input your email',
     },
-    Address: {
-        text: 'Input your address',
-    },
-    Phone: {
-        text: 'Input your Phone',
-    },
     Campus: {
         text: 'Select your campus',
         data: ['Boston', 'Seattle', 'Silicon Valley'],
@@ -49,15 +43,42 @@ const options = {
         text: 'Enrollment Student',
         data: ['Yes (active student)', 'No'],
     },
-    Citizenship: {
-        text: 'Select your citizenship',
-        data: ['America', 'Chinese', 'Indian', 'Canadian'],
-    }
 
 };
 
 
 class Profile extends Component {
+
+    constructor(props) {
+        super(props);
+        this.setProfileField = this.setProfileField.bind(this);
+        this.update = this.update.bind(this);
+
+        this.state = {
+            Gender: 'Male',
+            Age: 22,
+            Email: null,
+            Campus: 'Boston',
+            StartTerm: 'Spring 2016',
+            ExpectedGraduation: 'June 2018',
+            Major: 'Computer Science Align',
+            Degree: 'Bachelor',
+            Enrollment: 'Yes (active student)',
+        };
+    }
+
+    setProfileField(field, value) {
+        console.log("set", field, value)
+        this.setState({
+            [field]: value
+        })
+    }
+
+    update() {
+        console.log("update profile page", this.state);
+    }
+
+
     render() {
         return (
             <div>
@@ -66,25 +87,25 @@ class Profile extends Component {
                     <Grid>
                         <Row className="show-grid">
 
-                            <Col md={6} >
-                                <ProfileSelect options={options.Gender}/>
-                                <ProfileSelect options={options.Age}/>
+                            <Col md={6}>
+                                <ProfileSelect action={this.setProfileField} options={options.Gender} name={"Gender"}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Age} name={"Age"}/>
                                 <ProfileInput options={options.Email}/>
-                                <ProfileSelect options={options.Campus}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Campus} name={"Campus"}/>
                             </Col>
 
                             <Col md={6}>
-                                <ProfileSelect options={options.StartTerm}/>
-                                <ProfileSelect options={options.ExpectedGraduation}/>
-                                <ProfileSelect options={options.Major}/>
-                                <ProfileSelect options={options.Degree}/>
-                                <ProfileSelect options={options.Enrollment}/>
+                                <ProfileSelect action={this.setProfileField} options={options.StartTerm} name={"StartTerm"}/>
+                                <ProfileSelect action={this.setProfileField} options={options.ExpectedGraduation} name={"ExpectedGraduation"}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Major} name={"Major"}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Degree} name={"Degree"}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Enrollment} name={"Enrollment"}/>
                             </Col>
 
                         </Row>
                     </Grid>
                     <Experiences/>
-                    <UpdateButton>Update</UpdateButton>
+                    <UpdateButton onClick={this.update}>Update</UpdateButton>
                 </div>
 
 
