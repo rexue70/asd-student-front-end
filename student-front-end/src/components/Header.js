@@ -16,7 +16,7 @@ class Header extends Component {
 
 const CCISLogo = () => (
     <LogoArea>
-        <a href="http://www.ccis.northeastern.edu" target="_blank" rel="noreferer noopener" alt="Northeastern University" id="nu-logo">
+        <a href="http://www.ccis.northeastern.edu" target="_blank" rel="noopener noreferrer" alt="Northeastern University" id="nu-logo">
             <LogoImage src={img_CCISlogo} alt={'NEU-logo'}/>
         </a>
     </LogoArea>

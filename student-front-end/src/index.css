@@ -61,6 +61,27 @@ h3-median {
     text-align: justify;
 }
 
+.btn-prim {
+    border-radius: 10px;
+    background-color: rgba(245, 130, 130, 0.5);
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    padding: 14px 40px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-prim:hover {
+    background-color: #CC0000;
+}
+
+label {
+    color: #766D61;
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
 /*============================================*/
 
 ul.nav-row {
@@ -90,6 +111,25 @@ li:hover {
 .nav-text:hover {
     color: #e11a2c;
 }
+
+.navbar-trans {
+    background: transparent; }
+
+.btn-primary {
+    border-radius: 10px;
+    background-color: rgba(245, 130, 130, 0.5);
+    font-size: 16px;
+    font-weight: 100;
+    color: white;
+    padding: 14px 40px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.btn-primary:hover {
+    background-color: #CC0000;
+}
+
 
 
 
