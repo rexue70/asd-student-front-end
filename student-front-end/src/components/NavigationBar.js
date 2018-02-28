@@ -41,14 +41,14 @@ class NavigationBar extends Component {
                         </Navbar.Header>
                         <Navbar.Collapse>
                             <Nav activeKey={this.state.activeKey} onSelect={this.handleSelect.bind(this)}>
-                                <NavItem eventKey={1} href="/">
-                                    Home
+                                <NavItem eventKey={1}>
+                                    <Link to="/">Home</Link>
                                 </NavItem>
-                                <NavItem eventKey={2} href="/profile">
-                                    Profile
+                                <NavItem eventKey={2}>
+                                    <Link to="/profile">Profile</Link>
                                 </NavItem>
-                                <NavItem eventKey={3} href="/academic">
-                                    Academic
+                                <NavItem eventKey={3}>
+                                    <Link to="/academic">Academic</Link>
                                 </NavItem>
                             </Nav>
                         </Navbar.Collapse>
