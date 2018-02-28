@@ -52,7 +52,7 @@ class NavigationBar extends Component {
                                     <Link to="/academic">Academic</Link>
                                 </NavItem>
                                 <NavItem eventKey={4} href="/resources">
-                                    Resources
+                                    <Link to="/resources">Resources</Link>
                                 </NavItem>
                             </Nav>
                         </Navbar.Collapse>

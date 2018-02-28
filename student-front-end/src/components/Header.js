@@ -22,7 +22,6 @@ const CCISLogo = () => (
     </LogoArea>
     )
 
-
 const LogoArea = styled.div`
         width: 100%;
         height: 100px;

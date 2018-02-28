@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
-import academic_background from '../../images/academic.png';
-import coop_background from '../../images/background.png';
+import resource_background from '../../images/resource_background.png';
 import styled from 'styled-components'
 import { css } from 'react-bootstrap';
 
-class AcademicSemester extends Component {
+class ResourceContent extends Component {
 
     constructor(props) {
         super(props);
@@ -14,33 +13,35 @@ class AcademicSemester extends Component {
     render() {
         return (
             <div>
-                <div style={{backgroundImage: "url(" + coop_background + ")", backgroundPosition: "center", height: "700px"}}>
-                    <Title>Academic</Title>
+                <div style={{backgroundImage: "url(" + resource_background + ")", backgroundPosition: "center", height: "700px"}}>
+                    <Title>Resource</Title>
                 </div>
                 <Divider1></Divider1>
 
-                <SubTitle>My Academic Progress</SubTitle>
-                <SubTitle1>ALIGN BRIDGE COURSES</SubTitle1>
+                <SubTitle>Student Resources</SubTitle>
+                <SubTitle1>CAMPUS SUPPORT</SubTitle1>
                 <ul>
-                    <List>Fundamentals of Computer Science</List>
-                    <List>Discrete Structures</List>
-                    <List>Computer System/Algorithms</List>
-                    <List>Object Oriented Design/Java Programming</List>
+                    <List>Free Wi-Fi and Technology Checkout</List>
+                    <List>Parking positions</List>
+                    <List>Husky Card</List>
+                    <List>Printing</List>
+                    <List>Student Resource Center</List>
 
                 </ul>
-                <SubTitle1>COUR COURSES</SubTitle1>
+                <SubTitle1>STUDENT SERVICES</SubTitle1>
                 <ul>
-                    <List>Algorithms</List>
-                    <List>Computer Science</List>
-                    <List>Managing Software Development</List>
-                    <List>Advanced Software Development</List>
+                    <List>Career Services</List>
+                    <List>Student Financial Services</List>
+                    <List>myNortheastern</List>
+                    <List>Disability Resource Center</List>
                 </ul>
-                <Divider1></Divider1>
 
-                <SubTitle>My GPA</SubTitle>
-                <SubTitle1>Cumulative GPA</SubTitle1>
-                <Text>3.83</Text>
-                <SubTitle1>Term GPA</SubTitle1>
+                <SubTitle1>HEALTH RESOURCES</SubTitle1>
+                <ul>
+                    <List>Northeastern University Student Health Plan</List>
+                </ul>
+                <br/>
+                <br/>
                 <br/>
             </div>
         )
@@ -88,6 +89,11 @@ const List = styled.li`
     font-size: 2em;
     font-weight: 100;
     color: #8c8c8c;
+    
+    &:hover {
+            color: rgba(255,0,0,1);
+            cursor: pointer;
+        }
     `
 const Text = styled.p`
     font-family: "Helvetica Neue";
@@ -96,4 +102,4 @@ const Text = styled.p`
     color: #8c8c8c;
     `
 
-export default AcademicSemester
+export default ResourceContent
