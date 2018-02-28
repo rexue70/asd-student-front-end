@@ -78,7 +78,7 @@ const Square = styled.div`
 const GraySquare = styled.div`
         width: 250px;
         height: 250px;
-        background-color: rgba(100,100,100,0.5);
+        background-color: rgba(150,150,150,0.5);
         text-align: right;
         display: table-cell;
 `
