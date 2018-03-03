@@ -9,7 +9,7 @@ class ProfileSelect extends Component {
         this.state = {
             text: this.props.options.text,
             options: this.props.options.data,
-            value: "",
+            value: undefined
         };
     }
 
@@ -21,19 +21,22 @@ class ProfileSelect extends Component {
         this.props.action(this.props.name, event.target.value);
     }
 
+    componentWillReceiveProps(nextProps) {
+        this.setState({value: nextProps.value});
+        console.log("Received data", nextProps.value);
+    }
 
     render() {
-
         const optionList = this.state.options.map(option => {
             return (
-                <option key={option} value={option} >{option}</option>
+                <option key={option} value={option}>{option}</option>
             )
         });
 
         return (
             <div style={{margin: "auto", width: "50%"}}>
                 <p>{this.state.text}</p>
-                <select style={{width: "175px"}} onChange={this.change}>
+                <select style={{width: "175px"}} value={this.state.value} onChange={this.change}>
                     {optionList}
                 </select>
             </div>

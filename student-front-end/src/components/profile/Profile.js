@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import ProfileSelect from "./ProfileSelect";
 import ProfileInput from "../profile/ProfileInput";
 import ProfileCard from "../profile/ProfileCard"
-import {Row, Col, Grid, css} from 'react-bootstrap';
+import {Row, Col, Grid} from 'react-bootstrap';
 
 import Experiences from "./Experiences"
 
@@ -53,33 +53,102 @@ class Profile extends Component {
         super(props);
         this.setProfileField = this.setProfileField.bind(this);
         this.update = this.update.bind(this);
+        let studentID = 1; // Should be provided by login info
 
         this.state = {
-            Gender: 'Male',
-            Age: 22,
-            Email: null,
-            Campus: 'Boston',
-            StartTerm: 'Spring 2016',
-            ExpectedGraduation: 'June 2018',
-            Major: 'Computer Science Align',
-            Degree: 'Bachelor',
-            Enrollment: 'Yes (active student)',
+            StudentID: studentID,
+            Gender: undefined,
+            Age: undefined,
+            Email: undefined,
+            Campus: undefined,
+            StartTerm: undefined,
+            ExpectedGraduation: undefined,
+            Major: undefined,
+            Degree: undefined,
+            Enrollment: undefined,
         };
     }
 
+    getStudent(studentID) {
+        let API = 'http://127.0.0.1:5000/students/';
+        let query;
+
+        if (!studentID) {
+            query = this.props.studentID;
+        } else {
+            query = studentID;
+        }
+        fetch(API + query)//get Req with query info
+            .then((response) => response.json())
+            .then((responseJson) => {
+                this.setState({
+                    Gender: responseJson.Gender,
+                    Age: responseJson.Age,
+                    Email: responseJson.Email,
+                    Campus: responseJson.Campus,
+                    StartTerm: responseJson.StartTerm,
+                    ExpectedGraduation: responseJson.ExpectedGraduation,
+                    Major: responseJson.Major,
+                    Degree: responseJson.Degree,
+                    Enrollment: responseJson.Enrollment,
+                });
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    }
+
+    putStudent(studentID) {
+        let API = 'http://127.0.0.1:5000/students/';
+        let _this  = this;
+        let bodyContent = JSON.stringify({
+            StudentID: _this.state.StudentID,
+            Gender: _this.state.Gender,
+            Age: _this.state.Age,
+            Email: _this.state.Email,
+            Campus: _this.state.Campus,
+            StartTerm: _this.state.StartTerm,
+            ExpectedGraduation: _this.state.ExpectedGraduation,
+            Major: _this.state.Major,
+            Degree: _this.state.Degree,
+            Enrollment: _this.state.Enrollment,
+        });
+        fetch(API + studentID, {
+            method: 'PUT',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: bodyContent
+        }).then((response) => {
+            if (response.ok) {
+                alert("Success!")
+            }
+        }).catch((error) => {
+                console.error(error);
+            });
+    }
+
+
     setProfileField(field, value) {
-        console.log("set", field, value)
+        console.log("set", field, value);
         this.setState({
             [field]: value
         })
     }
 
+    componentWillMount() {
+        this.getStudent(this.state.StudentID);
+    }
+
     update() {
-        console.log("update profile page", this.state);
+        this.putStudent(this.state.StudentID)
     }
 
 
     render() {
+        console.log("state", this.state);
+        let _state = this.state;
         return (
             <div>
                 <div>
@@ -88,18 +157,18 @@ class Profile extends Component {
                         <Row className="show-grid">
 
                             <Col md={6}>
-                                <ProfileSelect action={this.setProfileField} options={options.Gender} name={"Gender"}/>
-                                <ProfileSelect action={this.setProfileField} options={options.Age} name={"Age"}/>
-                                <ProfileInput options={options.Email}/>
-                                <ProfileSelect action={this.setProfileField} options={options.Campus} name={"Campus"}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Gender} name={"Gender"} value={_state.Gender} />
+                                <ProfileSelect action={this.setProfileField} options={options.Age} name={"Age"} value={_state.Age}/>
+                                <ProfileInput action={this.setProfileField} options={options.Email} name={"Email"} value={_state.Email}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Campus} name={"Campus"} value={_state.Campus}/>
                             </Col>
 
                             <Col md={6}>
-                                <ProfileSelect action={this.setProfileField} options={options.StartTerm} name={"StartTerm"}/>
-                                <ProfileSelect action={this.setProfileField} options={options.ExpectedGraduation} name={"ExpectedGraduation"}/>
-                                <ProfileSelect action={this.setProfileField} options={options.Major} name={"Major"}/>
-                                <ProfileSelect action={this.setProfileField} options={options.Degree} name={"Degree"}/>
-                                <ProfileSelect action={this.setProfileField} options={options.Enrollment} name={"Enrollment"}/>
+                                <ProfileSelect action={this.setProfileField} options={options.StartTerm} name={"StartTerm"} value={_state.StartTerm}/>
+                                <ProfileSelect action={this.setProfileField} options={options.ExpectedGraduation} name={"ExpectedGraduation"} value={_state.ExpectedGraduation}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Major} name={"Major"} value={_state.Major}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Degree} name={"Degree"} value={_state.Degree}/>
+                                <ProfileSelect action={this.setProfileField} options={options.Enrollment} name={"Enrollment"} value={_state.Enrollment}/>
                             </Col>
 
                         </Row>
