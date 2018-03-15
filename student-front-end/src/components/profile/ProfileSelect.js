@@ -31,15 +31,18 @@ class ProfileSelect extends Component {
         });
 
         return (
-            <div style={{margin: "auto", width: "50%"}}>
-                <p>{this.state.text}</p>
-                <select style={{width: "175px"}} onChange={this.change}>
+            <div style={{margin: "auto", width: "80%"}}>
+
+                <h5>
+                    <label>{this.state.text}</label>
+                </h5>
+                <select class="form-control"  onChange={this.change}>
                     {optionList}
                 </select>
             </div>
         )
     }
 }
-
+// style={{width: "175px"}}
 
 export default ProfileSelect

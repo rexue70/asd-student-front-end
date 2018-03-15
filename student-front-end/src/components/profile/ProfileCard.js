@@ -38,78 +38,85 @@ class ProfileCard extends Component {
                 </div>
 
 
-                <Grid>
-                    <Row className="show-grid">
+                {/*<Grid>*/}
+                    {/*<Row className="show-grid">*/}
 
-                        <Col md={6}>
-                            <img style={{display: "block", margin: "auto", width: "50%", height: "50%"}}
-                                 src={profile_pic} alt="pic"/>
-                        </Col>
+                        {/*<Col md={6}>*/}
+                            {/*<img style={{display: "block", margin: "auto", width: "50%", height: "50%"}}*/}
+                                 {/*src={profile_pic} alt="pic"/>*/}
+                        {/*</Col>*/}
 
-                        <Col md={6}>
-                            <Area>
-                                <table>
-                                    <tbody>
-                                    <tr width="100%">
-                                        <td width="50%">
-                                            <Label>FirstName</Label>
-                                        </td>
-                                        <td width="10%">
-                                            <ButtonEdit src={pen}></ButtonEdit>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <Content>Yudong</Content>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                    <tbody>
-                                    <tr width="100%">
-                                        <td width="50%">
-                                            <Label>MiddleName</Label>
-                                        </td>
-                                        <td width="10%">
-                                            <ButtonEdit src={pen}></ButtonEdit>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <Content></Content>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                    <tbody>
-                                    <tr width="100%">
-                                        <td width="50%">
-                                            <Label>LastName</Label>
-                                        </td>
-                                        <td width="10%">
-                                            <ButtonEdit src={pen}></ButtonEdit>
-                                        </td>
-                                    </tr>
-                                    </tbody>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <Content>Wang</Content>
-                                        </td>
-                                    </tr>
-                                    </tbody>
+                        {/*<Col md={6}>*/}
+                            {/*<Area>*/}
+                                {/*<table>*/}
+                                    {/*<tbody>*/}
+                                    {/*<tr width="100%">*/}
+                                        {/*<td width="50%">*/}
+                                            {/*<Label>FirstName</Label>*/}
+                                        {/*</td>*/}
+                                        {/*<td width="10%">*/}
+                                            {/*<ButtonEdit src={pen}></ButtonEdit>*/}
+                                        {/*</td>*/}
+                                    {/*</tr>*/}
+                                    {/*</tbody>*/}
+                                    {/*<tbody>*/}
+                                    {/*<tr>*/}
+                                        {/*<td>*/}
+                                            {/*<Content>Yudong</Content>*/}
+                                        {/*</td>*/}
+                                    {/*</tr>*/}
+                                    {/*</tbody>*/}
+                                    {/*<tbody>*/}
+                                    {/*<tr width="100%">*/}
+                                        {/*<td width="50%">*/}
+                                            {/*<Label>MiddleName</Label>*/}
+                                        {/*</td>*/}
+                                        {/*<td width="10%">*/}
+                                            {/*<ButtonEdit src={pen}></ButtonEdit>*/}
+                                        {/*</td>*/}
+                                    {/*</tr>*/}
+                                    {/*</tbody>*/}
+                                    {/*<tbody>*/}
+                                    {/*<tr>*/}
+                                        {/*<td>*/}
+                                            {/*<Content></Content>*/}
+                                        {/*</td>*/}
+                                    {/*</tr>*/}
+                                    {/*</tbody>*/}
+                                    {/*<tbody>*/}
+                                    {/*<tr width="100%">*/}
+                                        {/*<td width="50%">*/}
+                                            {/*<Label>LastName</Label>*/}
+                                        {/*</td>*/}
+                                        {/*<td width="10%">*/}
+                                            {/*<ButtonEdit src={pen}></ButtonEdit>*/}
+                                        {/*</td>*/}
+                                    {/*</tr>*/}
+                                    {/*</tbody>*/}
+                                    {/*<tbody>*/}
+                                    {/*<tr>*/}
+                                        {/*<td>*/}
+                                            {/*<Content>Wang</Content>*/}
+                                        {/*</td>*/}
+                                    {/*</tr>*/}
+                                    {/*</tbody>*/}
 
-                                </table>
-                            </Area>
-                        </Col>
+                                {/*</table>*/}
+                            {/*</Area>*/}
+                        {/*</Col>*/}
 
-                    </Row>
-                </Grid>
-                <br />
-                <hr />
-                <br />
+                    {/*</Row>*/}
+                {/*</Grid>*/}
+
+
+
+
+
+
+
+                {/*<br />*/}
+                {/*<hr />*/}
+                {/*<br />*/}
             </ div >
         )
     }

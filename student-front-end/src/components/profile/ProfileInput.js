@@ -12,9 +12,13 @@ class ProfileInput extends Component {
 
     render() {
         return (
-            <div style={{margin:"auto",width:"50%"}}>
-                <p>{this.state.text}</p>
-                <input style={{width: "167px"}}/>
+            <div style={{margin:"auto",width:"80%"}}>
+
+                    <h5>
+                        <label>{this.state.text}</label>
+                    </h5>
+
+                <input class="form-control"/>
             </div>
         )
     }
