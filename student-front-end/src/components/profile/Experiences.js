@@ -72,7 +72,7 @@ export default class Experiences extends Component {
                 <Title>
                     <tr>
                         <td><CardTitle>Experience</CardTitle></td>
-                        <td><ButtonAdd onClick = {this.addNewExperience}>+</ButtonAdd></td>
+                        {/*<td><ButtonAdd onClick = {this.addNewExperience}>+</ButtonAdd></td>*/}
                     </tr>
                 </Title>
 
@@ -80,8 +80,10 @@ export default class Experiences extends Component {
                     <div>
                         <Details>
                             <tr key={item.id}>
-                                <td><JobTitle>{item.jobTitle}</JobTitle>
-                                <ButtonEdit onClick={() => this.handleEdit(item)} src={pen}></ButtonEdit></td>
+                                <td>
+                                    <JobTitle>{item.jobTitle}</JobTitle>
+                                    {/*<ButtonEdit onClick={() => this.handleEdit(item)} src={pen}></ButtonEdit>*/}
+                                </td>
                             </tr>
                             <tr><Company>{item.company}</Company></tr>
                             <tr><Time>{item.time}</Time></tr>
