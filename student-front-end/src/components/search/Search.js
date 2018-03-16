@@ -8,8 +8,7 @@ import ReactGridLayout from 'react-grid-layout';
 class Search {
 
     render() {
-        return (
-        var layout = [
+        const layout = [
             {i: 'filter', x: 0, y: 0, w: 4, h: 30, static: true},
             {i: 'searchResult', x: 1, y: 0, w: 8, h: 30, static: true}
         ];
