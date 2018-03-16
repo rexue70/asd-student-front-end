@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Filter from "./Filter";
 import SearchResult from "./SearchResult";
 import { Grid, Row, Col, css } from 'react-bootstrap';
-import { ReactGridLayout } from '{universe:react-grid-layout}';
+import ReactGridLayout from 'react-grid-layout';
 
 class Search {
 
